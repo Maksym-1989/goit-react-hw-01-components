@@ -1,0 +1,31 @@
+.container {
+  background-color: rgb(218, 216, 206);
+  padding: 30px;
+}
+
+.table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  border-radius: 10px;
+  border-spacing: 0;
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: 3px 5px 18px 13px rgba(34, 60, 80, 0.46);
+
+}
+.th {
+  background: #bcebdd;
+  color: white;
+  text-shadow: 0 1px 1px #2d2020;
+  padding: 10px 20px;
+}
+
+.tr:last-child td:first-child {
+  border-radius: 0 0 0 10px;
+}
+.tr:last-child td:last-child {
+  border-radius: 0 0 10px 0;
+}
+.tr .td:last-child {
+  border-right: none;
+}

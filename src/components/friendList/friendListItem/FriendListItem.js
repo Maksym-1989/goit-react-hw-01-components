@@ -1,23 +1,36 @@
-import React from 'react';
-// import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from 'prop-types';
+import css from "./FriendListItem.module.css";
 
-const FriendListItem = ({friend}) => {
-return (
-    <li className="item">
-        <span className="status" style={{backgroundColor: 'green' }}></span>
-        <img className="avatar" src={friend.avatar} alt={friend.name} width="48" />
-        <p className="name">{friend.name}</p>
+const FriendListItem = ({ friend }) => {
+  return (
+    <li className={css.item}>
+      <span
+        className={css.status}
+        style={{ backgroundColor: `${friend.isOnline ? "green" : "red"}` }}
+      ></span>
+      <img
+        className={css.img}
+        src={friend.avatar}
+        alt={friend.name}
+        width="48"
+      />
+      <p className={css.text}>{friend.name}</p>
     </li>
-    )
+  );
 };
 
+FriendListItem.propTypes = {
+  friend: PropTypes.shape({
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+    id: PropTypes.number.isRequired,
+  }),
+};
 
 // FriendListItem.propTypes = {
-//     avatar: PropTypes.string,
-//     name: PropTypes.string.isRequired,
-//     isOnline: PropTypes.bool.isRequired,
-//     id: PropTypes.number.isRequired,
-// };
+//   friend: PropTypes.bool,
+// }
 
-// style={isOnline ? "backgroundColor: 'green'" : "backgroundColor: 'red'" } width="10" height="10"
 export default FriendListItem;

@@ -1,0 +1,23 @@
+.container {
+  background-color: rgb(218, 216, 206);
+  padding: 30px;
+}
+
+.card {
+  width: 400px;
+  border: 1px solid gray;
+  box-shadow: 3px 5px 18px 13px rgba(34, 60, 80, 0.46);
+  margin: 0 auto;
+}
+
+.title {
+  padding: 20px;
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
